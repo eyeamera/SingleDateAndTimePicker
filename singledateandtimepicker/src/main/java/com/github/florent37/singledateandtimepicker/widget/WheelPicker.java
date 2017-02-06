@@ -854,14 +854,9 @@ public abstract class WheelPicker extends View {
         return 0;
     }
 
-    @TargetApi(Build.VERSION_CODES.N)
+//    @TargetApi(Build.VERSION_CODES.N)
     public Locale getCurrentLocale() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            return getResources().getConfiguration().getLocales().get(0);
-        } else {
-            //noinspection deprecation
-            return getResources().getConfiguration().locale;
-        }
+        return getResources().getConfiguration().locale;
     }
 
     public interface BaseAdapter {
